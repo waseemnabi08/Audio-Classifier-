@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6C757D, #343a40);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .about-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            margin: 50px auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .about-container h1 {
+            color: #007BFF;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .about-container p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about-container a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .about-container a:hover {
+            text-decoration: underline;
+        }
+
+        .back-button {
+            background-color: #28A745;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #218838;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <h1>About the Audio Classifier Project</h1>
+        <p>
+            This project is designed to classify audio files into three categories: music, speech, and noise. 
+            It uses machine learning techniques to analyze the audio data and predict the category with a certain probability.
+        </p>
+        <p>
+            The project is built using Python, TensorFlow, and Flask for the backend, and HTML, CSS, and JavaScript for the frontend.
+            The model is trained on a dataset of audio files and can accurately classify new audio files uploaded by the user.
+        </p>
+        <p>
+            The audio classification model is based on MFCC (Mel Frequency Cepstral Coefficients) features extracted from the audio files.
+            These features are commonly used in audio processing and are effective in distinguishing between different types of sounds.
+        </p>
+        <p>
+            You can view the source code of this project on <a href="https://colab.research.google.com/drive/1flaLHBB_1cQnrNP7wPiPgxVobwUbYViY?usp=sharing" target="_blank">Google Colab</a>.
+        </p>
+        <a href="/" class="back-button">Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Designed and Developed by <a href="https://github.com/waseemnabi08">Waseem Nabi</a>
+    </footer>
+</body>
+</html>
